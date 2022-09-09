@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <td colspan="2"><input type="number" id="input1"></td>
+            <td colspan="2"><input type="number" id="input2"></td>
+        </tr>
+
+        <tr>
+            <td>
+                <button type="button" id="addition" onclick="tong()">Addition(+)</button>
+            </td>
+            <td>
+                <button type="button" id="subtraction" onclick="hieu()">Subtraction(-)</button>
+            </td>
+            <td>
+                <button type="button" id="multiplication" onclick="tich()">Multiplication(X)</button>
+            </td>
+            <td>
+                <button type="button" id="division" onclick="thuong()">Addition(/)</button>
+            </td>
+        </tr>
+    </table>
+    <p id="result">Result</p>
+</form>
+
+
+</body>
+</html>
+
+<script>
+    function tong() {
+        let input1 = document.getElementById("input1").value;
+        let input2 = document.getElementById("input2").value;
+        let result = document.getElementById("result");
+
+        let tong = Number(input1) + Number(input2);
+        result.innerText= "Result: " + tong;
+    }
+
+    function hieu() {
+        let input1 = document.getElementById("input1").value;
+        let input2 = document.getElementById("input2").value;
+        let result = document.getElementById("result");
+
+        let hieu = Number(input1) - Number(input2);
+        result.innerText= "Result: " + hieu;
+    }
+
+
+    function tich() {
+        let input1 = document.getElementById("input1").value;
+        let input2 = document.getElementById("input2").value;
+        let result = document.getElementById("result");
+
+        let tich = Number(input1) * Number(input2);
+        result.innerText= "Result: " + tich;
+    }
+
+
+    function thuong() {
+        let input1 = document.getElementById("input1").value;
+        let input2 = document.getElementById("input2").value;
+        let result = document.getElementById("result");
+
+        let thuong = Number(input1) / Number(input2);
+        result.innerText= "Result: " + thuong;
+    }
+</script>
