@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form>
+  <table>
+    <tr>
+      <th>Kiểm tra số ngày trong tháng</th>
+    </tr>
+    <tr>
+      <td><input type="number" id="input1"></td>
+      <td><input type="button" value="Tính số ngày" onclick="checkMonth()"></td>
+    </tr>
+    <tr>
+      <p id="output"></p>
+
+    </tr>
+  </table>
+  <script>
+    function checkMonth() {
+      let input1 = +document.getElementById("input1").value
+      switch (input1) {
+        case 1:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+          document.getElementById("output").innerHTML = 'Tháng có 31 ngày'
+          break
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+          document.getElementById("output").innerHTML = 'Tháng có 30 ngày'
+          break
+        default:
+          document.getElementById("output").innerHTML = 'Tháng có 28 ngày hoặc 29 ngày'
+      }
+    }
+
+  </script>
+</form>
+
+</body>
+</html>
