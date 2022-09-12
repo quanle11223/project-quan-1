@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+  <table>
+    <tr>
+      <td> Điểm kiểm tra 1 tiếng <input type="text" id="onehourtest"></td>
+    </tr>
+    <tr>
+      <td> Điểm kiểm tra 15 phút <input type="text" id="15minutes"></td>
+    </tr>
+    <tr>
+      <td> Điểm thi giữa kỳ<input type="text" id= "giuaky"></td>
+    </tr>
+    <tr>
+      <td> Điểm thi cuối kỳ <input type="text" id="cuoiky"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="Kiểm tra" onclick="Check1()"></td>
+    </tr>
+  </table>
+  <p id="Check2">Kết quả</p>
+<script>
+  function Check1() {
+  let a = +document.getElementById('onehourtest').value
+  let b = +document.getElementById('15minutes').value
+  let c = +document.getElementById('giuaky').value
+  let d = +document.getElementById('cuoiky').value
+  let e = ((a + b + c + d) / 4)
+   if (e >= 9) {
+     document.getElementById('Check2').innerHTML = 'Loại A'
+     } else if ((e <= 8) && (e = 6)) {
+       document.getElementById('Check2').innerHTML = 'Loại B'
+     } else if ((e < 6 ) && (e = 4)) {
+    document.getElementById('Check2').innerHTML = 'Loại C'
+     } else {
+    document.getElementById('Check2').innerHTML = 'Loại D'
+     }
+    }
+</script>
+</form>
+
+</body>
+</html>

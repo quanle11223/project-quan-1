@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+  <td><input type="number" id="number1"></td>
+  <td><input type="number" id="number2"></td>
+  <td><input type="number" id="number3"></td>
+  <td><input type="button" value="NumberCheck" onclick="Check1()"></td>
+</table>
+<p id="Check2"></p>
+<script>
+  function Check1() {
+      let a = document.getElementById("number1").value
+      let b = document.getElementById("number2").value
+      let c = document.getElementById("number3").value
+      if ((a > b) && (a > c)) {
+          document.getElementById("Check2").innerHTML = 'a là số lớn nhất'
+      } else if ((b > a) && (b > c)) {
+          document.getElementById("Check2").innerHTML = 'b là số lớn nhất'
+      } else if ((c > b) && (c > a)) {
+          document.getElementById("Check2").innerHTML = 'c là số lớn nhất'
+      }
+          }
+</script>
+</body>
+</html>

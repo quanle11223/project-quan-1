@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+  <td><input type="text" id="number"></td>
+  <td><input type="button" value="Kiểm tra" onclick="Clickme()"></td>
+</table>
+<p id="Clickme1"></p>
+<script>
+  function Clickme() {
+    let a = +document.getElementById("number").value
+    if (a > 0) {
+      document.getElementById("Clickme1").innerHTML = "Số lớn hơn 0"
+    } else if (a < 0) {
+      document.getElementById("Clickme1").innerHTML = "Số nhỏ hơn 0"
+    } else {
+      document.getElementById("Clickme1").innerHTML = "Số bằng 0"
+    }
+  }
+</script>
+</body>
+</html>

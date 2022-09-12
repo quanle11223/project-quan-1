@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <td><input type="number" id="Age" ></td>
+    <td><input type="button" value="Kiểm tra" onclick="Age()"></td>
+
+</table>
+<p id="Age1"></p>
+<script>
+    function Age() {
+        let a = +document.getElementById("Age").value
+        if (a == 15) {
+            document.getElementById("Age1").innerHTML = 'Đủ điều kiện nhập hoc'
+        } else {
+            document.getElementById("Age1").innerHTML = 'Không đủ điều kiện nhập hoc'
+        }
+    }
+</script>
+
+
+</body>
+</html>
