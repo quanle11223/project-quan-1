@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form>
+  <script>
+    let weight = prompt('Chỉ số cân năng')
+    let height = prompt('Chỉ số chiều cao')
+    let bim = weight / (height * height)
+    if (bim <= 18.5)
+      document.write('UnderWeight');
+    else if (bim <= 25.0)
+      document.write('Normal');
+    else if (bim <= 30.0)
+      document.write('OverWeight');
+    else
+      document.write('Obese')
+  </script>
+
+</form>
+</body>
+
+</html>
