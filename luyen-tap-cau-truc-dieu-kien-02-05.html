@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<form>
+  <table>
+    <tr>
+      <td>Nhập cạnh kề a: <input type="text" id="inputa"></td>
+      <td>Nhập cạnh kề b: <input type="text" id="inputb"></td>
+      <td><input type="button" value="Kiểm tra" onclick="check2()"></td>
+    </tr>
+  </table>
+  <p id="display"></p>
+</form>
 </body>
+<script>
+  function check2() {
+    let a = document.getElementById('inputa').value
+    let b = document.getElementById('inputb').value
+    let S = ((a * b) / 2)
+    document.getElementById('display').innerHTML = 'Diện tích tam giác vuông là:' + S
+  }
+</script>
 </html>

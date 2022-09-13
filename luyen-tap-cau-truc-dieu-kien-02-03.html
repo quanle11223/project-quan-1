@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<form>
+  <table>
+    <tr>
+      <td>Nhập cạnh a: <input type="text" id="inputa"></td>
+      <td><input type="button" value="Kiểm tra" onclick="Clickme()"></td>
+    </tr>
+  </table>
+  <p id="Check1"></p>
+</form>
+<script>
+  function Clickme() {
+    let a = document.getElementById('inputa').value
+    let b = a * a
+    document.getElementById('Check1').innerHTML = 'Diện tích hình vuông là:' + b
+  }
+</script>
 </body>
 </html>
